@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:background="#F3F8F3"
+    android:layout_height="match_parent"
+    tools:context=".selection">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/namefb"
+
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nofb"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressfb"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/selectiontop"
+        >
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="32dp"-->
+        <!--            android:layout_height="35dp"-->
+        <!--            android:layout_margin="30dp"-->
+        <!--            android:id="@+id/arrow"-->
+        <!--            android:src="@drawable/ic_arrow"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:tint="@color/black"/>-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Milk"
+            android:gravity="center"
+            android:clickable="true"
+            app:fontFamily="@font/proxima" 
+            android:background="@drawable/topnavbag"
+
+
+
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/up5"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/selectiontop">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_margin="10dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="10"
+                    app:iss_delay="1000"
+                    app:iss_period="1000" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:id="@+id/label"
+        app:layout_constraintTop_toBottomOf="@+id/up5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Whole Milk"
+            app:fontFamily="@font/proxima" 
+
+            android:id="@+id/whole"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:textSize="30sp"
+
+            android:textColor="@color/green"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="500ml | 250kcal"
+            android:id="@+id/quantity"
+            app:fontFamily="@font/proxima" 
+            app:layout_constraintTop_toBottomOf="@id/whole"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selbac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/rectangle"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quantity">
+
+            <ProgressBar
+                android:id="@+id/progressbarforotp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/prize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Price Selection"
+                android:textColor="@color/green"
+                android:textSize="20sp"
+                app:fontFamily="@font/proxima" 
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/planselection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+
+                android:padding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prize"
+                app:layout_constraintVertical_bias="1.0">
+
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#D7FDD7"
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="One Time"
+
+                    android:textColor="@color/black"
+
+                    android:textSize="20sp"
+                    app:fontFamily="@font/proxima" 
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dam1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="4.69"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    app:fontFamily="@font/proxima" 
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/two"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#D7FDD7"
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Silver Plan"
+                    android:textColor="@color/black"
+
+
+                    android:textSize="20sp"
+                    app:fontFamily="@font/proxima" 
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/one" />
+
+                <TextView
+                    android:id="@+id/dam2st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:foreground="@drawable/strike"
+
+                    android:text="₹4.69"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+
+
+                    android:textStyle="italic"
+                    app:fontFamily="@font/proxima" 
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dam2" />
+
+                <TextView
+                    android:id="@+id/dam2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="2.50"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="10dp"
+
+
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    app:fontFamily="@font/proxima" 
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dam1" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/three"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:background="#D7FDD7"-->
+
+<!--                    android:clickable="true"-->
+<!--                    android:elevation="4dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Gold Plan"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:fontFamily="@font/proxima" -->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/two" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dam3st"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="20dp"-->
+
+<!--                    android:foreground="@drawable/strike"-->
+<!--                    android:text="₹4.69"-->
+
+
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="italic"-->
+<!--                    app:fontFamily="@font/proxima" -->
+<!--                    app:layout_constraintEnd_toStartOf="@id/dam3"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/dam2st" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dam3"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:text="1.99"-->
+<!--                    android:textColor="@color/grey"-->
+
+
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="italic"-->
+<!--                    app:fontFamily="@font/proxima" -->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/dam2" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/four"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="#D7FDD7"-->
+<!--                    android:clickable="true"-->
+<!--                    android:elevation="4dp"-->
+
+<!--                    android:gravity="center"-->
+<!--                    android:text="Diamond Plan"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:fontFamily="@font/proxima" -->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/three" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dam4st"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="20dp"-->
+
+<!--                    android:foreground="@drawable/strike"-->
+<!--                    android:text="₹4.69"-->
+<!--                    android:textColor="@color/grey"-->
+
+
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="italic"-->
+<!--                    app:fontFamily="@font/proxima" -->
+<!--                    app:layout_constraintEnd_toStartOf="@id/dam4"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/dam3st" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dam4"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:text="1.25"-->
+<!--                    android:textColor="@color/grey"-->
+<!--                    android:textSize="20sp"-->
+
+
+<!--                    android:textStyle="italic"-->
+<!--                    app:fontFamily="@font/proxima" -->
+
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/dam3" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:background="@color/green"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Total : ₹"
+            android:textColor="@color/white"
+
+
+            android:textSize="20sp"
+            app:fontFamily="@font/proxima" 
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:text="4.69"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            app:fontFamily="@font/proxima" 
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/total"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/green"
+
+            android:onClick="ShowPopup"
+
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:fontFamily="@font/proxima" 
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--      <EditText-->
+        <!--          android:layout_width="wrap_content"-->
+        <!--          android:layout_height="wrap_content"-->
+        <!--          android:textSize="20sp"-->
+        <!--          android:id="@+id/edit2"-->
+        <!--          android:layout_margin="10dp"-->
+        <!--          android:background="@android:color/transparent"-->
+        <!--          app:layout_constraintStart_toEndOf="@id/edit1"-->
+        <!--          app:layout_constraintTop_toBottomOf="@+id/total"-->
+        <!--          />-->
+        <!--      <TextView-->
+        <!--          android:layout_width="wrap_content"-->
+        <!--          android:layout_height="wrap_content"-->
+        <!--          android:text="Confirm"-->
+        <!--          android:textColor="@color/white"-->
+        <!--          android:layout_marginRight="20dp"-->
+        <!--          android:clickable="true"-->
+        <!--          android:id="@+id/pay4"-->
+        <!--          android:visibility="gone"-->
+
+
+        <!--          android:textSize="20dp"-->
+        <!--          app:fontFamily="@font/proxima" -->
+        <!--          android:textStyle="bold"-->
+        <!--          app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--          app:layout_constraintEnd_toEndOf="parent"-->
+        <!--          app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
